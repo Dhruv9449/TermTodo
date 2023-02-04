@@ -11,7 +11,7 @@ import (
 	"github.com/urfave/cli"
 )
 
-// ListTodo shows all todo items
+// Function to show all todo items from the database
 func showTodo(c *cli.Context) error {
 	var todo_item []models.TodoItem
 	database.DB.Find(&todo_item)
@@ -34,6 +34,7 @@ func showTodo(c *cli.Context) error {
 	return nil
 }
 
+// Command to show all todo items
 var ShowCommand = cli.Command{
 	Name:    "show",
 	Aliases: []string{"s"},

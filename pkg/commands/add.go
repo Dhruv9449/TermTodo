@@ -9,7 +9,7 @@ import (
 	"github.com/urfave/cli"
 )
 
-// AddTodo adds a todo item to the database
+// Function to add a todo item to the database
 func addTodo(c *cli.Context) error {
 	var todo_item models.TodoItem
 
@@ -29,6 +29,7 @@ func addTodo(c *cli.Context) error {
 	return nil
 }
 
+// Command to add a todo item
 var AddCommand = cli.Command{
 	Name:    "add",
 	Aliases: []string{"a"},

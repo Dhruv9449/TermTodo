@@ -9,6 +9,7 @@ import (
 	"github.com/urfave/cli"
 )
 
+// Function to delete a todo item from the database
 func deleteTodo(c *cli.Context) error {
 	if c.NArg() == 0 {
 		return cli.NewExitError("Please provide the id of the todo item", 1)
@@ -28,6 +29,7 @@ func deleteTodo(c *cli.Context) error {
 	return nil
 }
 
+// Command to delete a todo item
 var DeleteCommand = cli.Command{
 	Name:    "delete",
 	Aliases: []string{"d"},
